@@ -22,6 +22,9 @@
 	document.write('浏览器='+BrowserDetect.browser);
 	document.write('<br/>');
 	document.write('浏览器版本='+BrowserDetect.version);
-
+	if(BrowserDetect.browser=='Explorer'&&BrowserDetect.version<8)
+	{
+		document.write('你的浏览器已经需要升级了！')
+	}
 	</script>
 </html>
