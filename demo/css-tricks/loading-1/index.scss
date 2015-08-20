@@ -1,0 +1,106 @@
+$bodyColor: #171738;
+
+$spinBlue: #3423A6;
+$spinBlueBg: #171738;
+
+$spinDark: ghostwhite;
+$spinDarkBg: #403D39;
+
+$spinOrange: #EB5E28;
+$spinOrangeBg: #334B7F;
+
+$spinGreen: #0EAD69;
+$spinGreenBg: #540D6E;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+    margin: 0;
+}
+
+.flex-centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.blue { background-color: $spinBlueBg; }
+    &.dark { background-color: $spinDarkBg; }
+    &.orange { background-color: $spinOrangeBg; }
+    &.green { background-color: $spinGreenBg; }
+}
+
+.ring-container {
+    position: relative;
+    margin: 1em;
+
+    &.large { min-width: 200px; min-height: 200px; }
+    &.medium { min-width: 150px; min-height: 150px; }
+    &.small { min-width: 100px; min-height: 100px; }
+    &.mini {
+        min-width: 50px; min-height: 50px;
+
+        .inner-ring {
+            border-left-width: 2px;
+        }
+    }
+
+    .ring {
+        border-radius: 50%;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-duration: 1s;
+        border-left-style: solid;
+
+    }
+
+    &.blue .ring { border-color: $spinBlue; }
+    &.dark .ring { border-color: $spinGreen; }
+    &.orange .ring { border-color: $spinOrange; }
+    &.green .ring { border-color: $spinDark; }
+}
+
+.outer-ring {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none !important;
+}
+
+.inner-ring {
+    position: absolute;
+    border-left-width: 3px;
+
+    &.one { width: 90%; height: 90%; top: 5%; left: 5%; animation-name: rotate-neg; animation-duration: 1s;}
+    &.two { width: 80%; height: 80%; top: 10%; left: 10%; animation-name: rotate; animation-duration: 1.9s;}
+    &.three { width: 70%; height: 70%; top: 15%; left: 15%; animation-name: rotate-neg; animation-duration: 1.8s;}
+    &.four { width: 60%; height: 60%; top: 20%; left: 20%; animation-name: rotate; animation-duration: 1.7s;}
+    &.five { width: 50%; height: 50%; top: 25%; left: 25%; animation-name: rotate-neg; animation-duration: 1.6s;}
+    &.size { width: 40%; height: 40%; top: 30%; left: 30%; animation-name: rotate; animation-duration: 1.5s;}
+    &.seven { width: 30%; height: 30%; top: 35%; left: 35%; animation-name: rotate; animation-duration: 1.4s;}
+    &.eight { width: 20%; height: 20%; top: 40%; left: 40%; animation-name: rotate-neg; animation-duration: 1.3s;}
+
+}
+
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate-neg {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}

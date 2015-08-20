@@ -1,0 +1,21 @@
+{
+  "name": "frequently-used-demo",
+  "version": "0.0.1",
+  "homepage": "https://github.com/spheee/frequently-used-demo",
+  "authors": [
+    "kshy <habxp@163.com>"
+  ],
+  "description": "frequently-used-demo",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4"
+  }
+}

@@ -1,0 +1,130 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  padding: 0;
+  margin: 0; }
+
+.flex-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .flex-centered.blue {
+    background-color: #171738; }
+  .flex-centered.dark {
+    background-color: #403D39; }
+  .flex-centered.orange {
+    background-color: #334B7F; }
+  .flex-centered.green {
+    background-color: #540D6E; }
+
+.ring-container {
+  position: relative;
+  margin: 1em; }
+  .ring-container.large {
+    min-width: 200px;
+    min-height: 200px; }
+  .ring-container.medium {
+    min-width: 150px;
+    min-height: 150px; }
+  .ring-container.small {
+    min-width: 100px;
+    min-height: 100px; }
+  .ring-container.mini {
+    min-width: 50px;
+    min-height: 50px; }
+    .ring-container.mini .inner-ring {
+      border-left-width: 2px; }
+  .ring-container .ring {
+    border-radius: 50%;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 1s;
+    border-left-style: solid; }
+  .ring-container.blue .ring {
+    border-color: #3423A6; }
+  .ring-container.dark .ring {
+    border-color: #0EAD69; }
+  .ring-container.orange .ring {
+    border-color: #EB5E28; }
+  .ring-container.green .ring {
+    border-color: ghostwhite; }
+
+.outer-ring {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: none !important; }
+
+.inner-ring {
+  position: absolute;
+  border-left-width: 3px; }
+  .inner-ring.one {
+    width: 90%;
+    height: 90%;
+    top: 5%;
+    left: 5%;
+    animation-name: rotate-neg;
+    animation-duration: 1s; }
+  .inner-ring.two {
+    width: 80%;
+    height: 80%;
+    top: 10%;
+    left: 10%;
+    animation-name: rotate;
+    animation-duration: 1.9s; }
+  .inner-ring.three {
+    width: 70%;
+    height: 70%;
+    top: 15%;
+    left: 15%;
+    animation-name: rotate-neg;
+    animation-duration: 1.8s; }
+  .inner-ring.four {
+    width: 60%;
+    height: 60%;
+    top: 20%;
+    left: 20%;
+    animation-name: rotate;
+    animation-duration: 1.7s; }
+  .inner-ring.five {
+    width: 50%;
+    height: 50%;
+    top: 25%;
+    left: 25%;
+    animation-name: rotate-neg;
+    animation-duration: 1.6s; }
+  .inner-ring.size {
+    width: 40%;
+    height: 40%;
+    top: 30%;
+    left: 30%;
+    animation-name: rotate;
+    animation-duration: 1.5s; }
+  .inner-ring.seven {
+    width: 30%;
+    height: 30%;
+    top: 35%;
+    left: 35%;
+    animation-name: rotate;
+    animation-duration: 1.4s; }
+  .inner-ring.eight {
+    width: 20%;
+    height: 20%;
+    top: 40%;
+    left: 40%;
+    animation-name: rotate-neg;
+    animation-duration: 1.3s; }
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+@keyframes rotate-neg {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(-360deg); } }
+
+/*# sourceMappingURL=index.css.map */
